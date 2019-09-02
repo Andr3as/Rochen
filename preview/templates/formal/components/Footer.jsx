@@ -41,7 +41,7 @@ function Footer({invoice, profile, configs}) {
         </ColumnLeft>
         <ColumnRight>
           <h1>{profile.company}</h1>
-          <h2>{tax.tin}</h2>
+          <h2>{ tax && <p>Tax ID: { tax.tin }</p> }</h2>
           <h2>{profile.address}</h2>
           <h2>{profile.website}</h2>
         </ColumnRight>
