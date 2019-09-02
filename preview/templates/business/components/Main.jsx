@@ -127,12 +127,12 @@ function Main({ invoice, configs, t }) {
     <tr key={index}>
       <td className="w5">{padStart(index + 1, 2, 0)}.</td>
       <td>{row.description}</td>
+      <td className="w10">{row.quantity}{' h'}</td>
       <td className="w15">
         {currencyBefore ? currency : null}{' '}
         {formatNumber(row.price, fraction, separator)}{' '}
-        {currencyBefore ? null : currency}
+        {currencyBefore ? null : currency}{'/h'}
       </td>
-      <td className="w10">{row.quantity}</td>
       <td className="w15">
         {currencyBefore ? currency : null}{' '}
         {formatNumber(row.subtotal, fraction, separator)}{' '}
@@ -151,8 +151,8 @@ function Main({ invoice, configs, t }) {
           <tr>
             <th className="w5">{t('preview:common:order', {lng: language})}</th>
             <th>{t('preview:common:itemDescription', {lng: language})}</th>
-            <th className="w15">{t('preview:common:price', {lng: language})}</th>
             <th className="w10">{t('preview:common:qty', {lng: language})}</th>
+            <th className="w15">{t('preview:common:price', {lng: language})}</th>
             <th className="w15">{t('preview:common:subtotal', {lng: language})}</th>
           </tr>
         </thead>

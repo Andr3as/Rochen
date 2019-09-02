@@ -82,14 +82,11 @@ const Table = styled.table `
     `};
 `;
 
-const InvoiceTotal = styled.tr `
-`;
+const InvoiceTotal = styled.tr ``;
 
-const InvoiceDiscount = styled.tr `
-`;
+const InvoiceDiscount = styled.tr ``;
 
-const InvoiceTax = styled.tr `
-`;
+const InvoiceTax = styled.tr ``;
 
 function setAlignItems(configs) {
   let pos;
@@ -130,32 +127,16 @@ function Main({invoice, configs, t}) {
   const itemComponents = invoice.rows.map((row, index) => (
     <tr key={index}>
       <td colSpan="2">{row.description}</td>
+      <td className="w1">{formatNumber(row.quantity, 0, separator)}{' h'}</td>
       <td className="w1">
-        {
-        currencyBefore
-          ? currency
-          : null
-      }{' '}
+        { currencyBefore ? currency : null }{' '}
         {formatNumber(row.price, fraction, separator)}{' '}
-        {
-        currencyBefore
-          ? null
-          : currency
-      }
+        { currencyBefore ? null : currency }{'/h'}
       </td>
-      <td className="w1">{formatNumber(row.quantity, 0, separator)}</td>
       <td className="w1">
-        {
-        currencyBefore
-          ? currency
-          : null
-      }{' '}
+        { currencyBefore ? currency : null }{' '}
         {formatNumber(row.subtotal, fraction, separator)}{' '}
-        {
-        currencyBefore
-          ? null
-          : currency
-      }
+        { currencyBefore ? null : currency }
       </td>
     </tr>
 	));
@@ -166,8 +147,8 @@ function Main({invoice, configs, t}) {
         <thead>
           <tr>
             <th colSpan="2">{t('preview:common:itemDescription', {lng: language})}</th>
-            <th className="w1">{t('preview:common:price', {lng: language})}</th>
             <th className="w1">{t('preview:common:qty', {lng: language})}</th>
+            <th className="w1">{t('preview:common:price', {lng: language})}</th>
             <th className="w1">{t('preview:common:subtotal', {lng: language})}</th>
           </tr>
         </thead>
@@ -181,19 +162,11 @@ function Main({invoice, configs, t}) {
               {t('preview:common:subtotal', {lng: language})}
             </th>
             <td colSpan="2">
-              {
-              currencyBefore
-                ? currency
-                : null
-            }
+              { currencyBefore ? currency : null}
               {' '}
               {formatNumber(invoice.subtotal, fraction, separator)}
               {' '}
-              {
-              currencyBefore
-                ? null
-                : currency
-            }
+              { currencyBefore ? null : currency }
             </td>
           </tr>
 
