@@ -51,11 +51,11 @@ class ErrorBoundary extends Component {
           </h1>
           <h2>You have found a bug!</h2>
           <p>
-            Please report this to the maintainer of Manta.
+            Please report this to the maintainer of Rochen.
             <br />
-            GitHub: https://github.com/hql287/Manta
+            GitHub: https://github.com/Andr3as/Rochen
             <br />
-            Email: hi@manta.life
+            Email: rochen@anbaumann.de
           </p>
         </ErrorContainer>
       );

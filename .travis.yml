@@ -19,7 +19,7 @@ cache:
 notifications:
   email:
     recipients:
-      - hi@manta.life
+      - rochen@anbaumann.de
     on_success: never
     on_failure: always
 

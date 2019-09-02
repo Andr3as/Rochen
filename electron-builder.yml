@@ -1,10 +1,10 @@
-appId: com.electron.manta
-copyright: Hung Q. Le
-productName: Manta
+appId: com.electron.rochen
+copyright: Andreas Baumann
+productName: Rochen
 publish:
   - provider: github
-    owner: hql287
-    repo: Manta
+    owner: andr3as
+    repo: Rochen
 directories:
   output: dist/
 mac:

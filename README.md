@@ -1,3 +1,24 @@
+<h1>Rochen</h1>
+<p>Rochen is just a fork of <a href="https://github.com/hql287/Manta/">Manta</a>. Rochen is German for Manta since I'm German.</p>
+<p>I was deeply impressed from Manta, but since it seems to be no longer under active development and was missing some features I needed, I decided to fork it and to adapt it to my requirements.</p>
+
+<h3>Changes:</h3>
+<ul>
+  <li>Merged merge requests:</li>
+  <ul>
+    <li><a href="https://github.com/hql287/Manta/pull/276">Formal template files from adcat</a></li>
+    <li><a href="https://github.com/hql287/Manta/pull/307">Add Net 14 payment term from  defkev</a></li>
+    <li><a href="https://github.com/hql287/Manta/pull/308">Add payment details from defkev</a></li>
+    <li><a href="https://github.com/hql287/Manta/pull/309">Add (optional) recipient address from defkev</a></li>
+  </ul>
+  <li>Fixed crashing app if tax information is missing and formal layout is selected</li>
+  <li>Added the unit €/h to the price values and the unit 1/h to the quantity values in the printout of the formal and the business layout (<b>Hardcoded</b>)</li>
+</ul>
+
+<p>The app was renamed to point out the changes. Maybe more changes I need myself will follow.</p>
+<p>Feel free to create merge requests to contribute.</p>
+<p>I wont provide any builds of this app since it is for myself for now. You can create your own builds if you want to.</p>
+
 <p align="center">
   <img src="https://d3crtwyc2nw0fl.cloudfront.net/items/0M0W110L142j0t2H0W2X/manta-logo.svg" alt="Manta App Logo" width="180" height="auto"/>
 </p>

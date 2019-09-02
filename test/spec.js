@@ -98,7 +98,7 @@ describe('Application launch', () => {
 
       it('with correct title', () =>
         app.client.browserWindow.getTitle().then(title => {
-          expect(title).to.equal('Manta');
+          expect(title).to.equal('Rochen');
         }));
 
       it('with correct properties', () =>

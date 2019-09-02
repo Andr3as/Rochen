@@ -1,13 +1,13 @@
 {
-  "name": "Manta",
-  "homepage": "https://manta.life",
-  "productName": "Manta",
-  "version": "1.1.4",
+  "name": "Rochen",
+  "homepage": "https://rochen.anbaumann.de",
+  "productName": "Rochen",
+  "version": "1.0.1",
   "license": "GPL-3.0",
   "description": "Flexible invoicing desktop app with beautiful & customizable templates",
   "author": {
-    "name": "Hung Q. Le",
-    "email": "lequochung@me.com"
+    "name": "Andreas Baumann",
+    "email": "mail@anbaumann.de"
   },
   "main": "app.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "dotenv": "^5.0.1",
     "electron-is-dev": "^0.3.0",
     "electron-settings": "^3.1.2",
-    "electron-updater": "^2.21.0",
+    "electron-updater": "^4.0.0",
     "glob": "^7.1.2",
     "i18next": "^10.5.0",
     "is-svg": "^3.0.0",

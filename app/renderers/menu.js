@@ -191,7 +191,7 @@ const helpMenu = {
     {
       label: 'Learn More',
       click() {
-        require('electron').shell.openExternal('https://manta.life');
+        require('electron').shell.openExternal('https://github.com/Andr3as/Rochen');
       },
     },
   ],
