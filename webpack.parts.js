@@ -37,5 +37,5 @@ exports.minifyJavaScript = () => ({
 
 // Analyzing Bundle
 exports.analyzeBundle = () => ({
-  plugins: [new BundleAnalyzerPlugin()],
+  plugins: [new BundleAnalyzerPlugin({analyzerPort: 8889, openAnalyzer: false})],
 });

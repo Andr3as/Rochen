@@ -10,15 +10,22 @@
     <li><a href="https://github.com/hql287/Manta/pull/307">Add Net 14 payment term from  defkev</a></li>
     <li><a href="https://github.com/hql287/Manta/pull/308">Add payment details from defkev</a></li>
     <li><a href="https://github.com/hql287/Manta/pull/309">Add (optional) recipient address from defkev</a></li>
+    <li><a href="https://github.com/hql287/Manta/pull/324">add support for the ISO8601 date format from SimonWaldherr</a></li>
   </ul>
   <li>Fixed crashing app if tax information is missing and formal layout is selected</li>
   <li>Added the unit €/h to the price values and the unit 1/h to the quantity values in the printout of the formal and the business layout (<b>Hardcoded</b>)</li>
+  <li>Condensed business layout</li>
+  <li>Changed application icon</li>
 </ul>
 
 <p>The app was renamed to point out the changes. Maybe more changes I need myself will follow.</p>
 <p>Feel free to create merge requests to contribute.</p>
 <p>I wont provide any builds of this app since it is for myself for now. You can create your own builds if you want to.</p>
 
+<h6>Credits</h6>
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+
+<h2>Original Manta Readme</h2>
 <p align="center">
   <img src="https://d3crtwyc2nw0fl.cloudfront.net/items/0M0W110L142j0t2H0W2X/manta-logo.svg" alt="Manta App Logo" width="180" height="auto"/>
 </p>
