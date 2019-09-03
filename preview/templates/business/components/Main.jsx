@@ -93,6 +93,14 @@ const InvoiceTax = styled.tr`
   }
 `;
 
+const NoInvoiceTax = styled.tr`
+  td:last-child {
+    color: #2c323a;
+    font-size: 12px;
+    text-align: left !important;
+  }
+`;
+
 function setAlignItems(configs) {
   let pos;
   switch (configs.alignItems) {
@@ -232,6 +240,12 @@ function Main({ invoice, configs, t }) {
               {currencyBefore ? null : currency}
             </td>
           </InvoiceTotal>
+
+          {!tax && (
+            <NoInvoiceTax>
+              <td colSpan="6">Der Rechnungsbetrag enthält gemäß §19 UStG keine Umsatzsteuer.</td>
+            </NoInvoiceTax>
+          )}
         </tfoot>
       </Table>
     </InvoiceContent>
