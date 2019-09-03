@@ -49,6 +49,15 @@ const Invoice = styled.div`
   .w20 {
     width: 20%;
   }
+  .c1 {
+    width: 25px;
+  }
+  .c3 {
+    width: 50px;
+  }
+  .c4 {
+    width: 60px;
+  }
 `;
 
 // Child Components

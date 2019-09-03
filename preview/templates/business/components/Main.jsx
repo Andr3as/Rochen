@@ -42,9 +42,10 @@ const Table = styled.table`
   td {
     color: #2c323a;
     font-weight: 300;
-    line-height: 2.75;
+    line-height: 1.5;
     font-size: 0.7em;
     border-bottom: 2px solid #ecf1f1;
+    padding: 5px 0;
     &:first-child {
       color: #c4c8cc;
     }
@@ -125,15 +126,15 @@ function Main({ invoice, configs, t }) {
   // Render Items
   const itemComponents = invoice.rows.map((row, index) => (
     <tr key={index}>
-      <td className="w5">{padStart(index + 1, 2, 0)}.</td>
-      <td>{row.description}</td>
-      <td className="w10">{row.quantity}{' h'}</td>
-      <td className="w15">
+      <td>{padStart(index + 1, 2, 0)}.</td>
+      <td colSpan="2">{row.description}</td>
+      <td>{row.quantity}{' h'}</td>
+      <td>
         {currencyBefore ? currency : null}{' '}
         {formatNumber(row.price, fraction, separator)}{' '}
         {currencyBefore ? null : currency}{'/h'}
       </td>
-      <td className="w15">
+      <td>
         {currencyBefore ? currency : null}{' '}
         {formatNumber(row.subtotal, fraction, separator)}{' '}
         {currencyBefore ? null : currency}
@@ -149,18 +150,18 @@ function Main({ invoice, configs, t }) {
       >
         <thead>
           <tr>
-            <th className="w5">{t('preview:common:order', {lng: language})}</th>
-            <th>{t('preview:common:itemDescription', {lng: language})}</th>
-            <th className="w10">{t('preview:common:qty', {lng: language})}</th>
-            <th className="w15">{t('preview:common:price', {lng: language})}</th>
-            <th className="w15">{t('preview:common:subtotal', {lng: language})}</th>
+            <th className="c1">{t('preview:common:order', {lng: language})}</th>
+            <th colSpan="2">{t('preview:common:itemDescription', {lng: language})}</th>
+            <th className="c3">{t('preview:common:qty', {lng: language})}</th>
+            <th className="c4">{t('preview:common:price', {lng: language})}</th>
+            <th className="c5">{t('preview:common:subtotal', {lng: language})}</th>
           </tr>
         </thead>
         <tbody>{itemComponents}</tbody>
         <tfoot>
           <tr className="invoice__subtotal">
             <td colSpan="2" />
-            <td className="label" colSpan="2">
+            <td className="label" colSpan="3">
               {t('preview:common:subtotal', {lng: language})}
             </td>
             <td>
@@ -175,7 +176,7 @@ function Main({ invoice, configs, t }) {
           {discount && (
             <InvoiceDiscount>
               <td colSpan="2" />
-              <td className="label" colSpan="2">
+              <td className="label" colSpan="3">
                 {t('form:fields:discount:name', {lng: language})}{' '}
                 {discount.type === 'percentage' && (
                   <span> {discount.amount}%</span>
@@ -199,6 +200,7 @@ function Main({ invoice, configs, t }) {
               <td className="label" colSpan={tax.method === 'reverse' ? 1 : 2}>
                 {t('form:fields:tax:name', {lng: language})} {tax.amount}%
               </td>
+              <td></td>
               {tax.method === 'reverse' ? (
                 <td
                   className="label"
@@ -221,8 +223,8 @@ function Main({ invoice, configs, t }) {
             customAccentColor={customAccentColor}
           >
             <td colSpan="2" />
-            <td className="label">{t('preview:common:total', {lng: language})}</td>
-            <td colSpan="2">
+            <td colSpan="3" className="label">{t('preview:common:total', {lng: language})}</td>
+            <td colSpan="1">
               {currencyBefore ? currency : null}
               {' '}
               {formatNumber(invoice.grandTotal, fraction, separator)}
