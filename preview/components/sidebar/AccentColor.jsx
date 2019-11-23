@@ -24,6 +24,8 @@ class AccentColor extends Component {
       '#555555',
       '#dce775',
       '#ff8a65',
+      '#00539C',
+      '#D01C1F'
     ];
     const { t, UILang, accentColor } = this.props;
     return (
