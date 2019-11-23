@@ -136,7 +136,7 @@ function Main({ invoice, configs, t }) {
     <tr key={index}>
       <td>{padStart(index + 1, 2, 0)}.</td>
       <td colSpan="2">{row.description}</td>
-      <td>{row.quantity}{' h'}</td>
+      <td>{formatNumber(row.quantity, fraction, separator)}{' h'}</td>
       <td>
         {currencyBefore ? currency : null}{' '}
         {formatNumber(row.price, fraction, separator)}{' '}

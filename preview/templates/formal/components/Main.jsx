@@ -135,7 +135,7 @@ function Main({invoice, configs, t}) {
   const itemComponents = invoice.rows.map((row, index) => (
     <tr key={index}>
       <td colSpan="2">{row.description}</td>
-      <td className="w1">{row.quantity}{' h'}</td>
+      <td className="w1">{formatNumber(row.quantity, fraction, separator)}{' h'}</td>
       <td className="w1">
         { currencyBefore ? currency : null }{' '}
         {formatNumber(row.price, fraction, separator)}{' '}
